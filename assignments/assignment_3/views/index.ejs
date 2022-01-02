@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Express js</title>
+    <link href="/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <% users.forEach(user=>{%>
+            <div>
+                <img src="<%=user.image%>" alt="avatar"/>
+                <h3><%=user.name%></h3>
+                <p><%=user.email%></p>
+
+            </div>
+        <%})%>
+    </div>
+    <div>
+        <a href="/form">add user</a>
+    </div>
+    
+</body>
+</html>
