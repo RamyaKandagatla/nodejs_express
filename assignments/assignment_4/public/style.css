@@ -1,0 +1,59 @@
+body{
+    background-color: cadetblue;
+}
+
+.main{
+    max-width: 500px;
+    padding:10px;
+    margin:auto;
+    background-color:thistle;
+}
+.main-form{
+    margin-top: 40px;
+    max-width:500px;
+    padding:10px;
+    margin:auto;
+    background-color: thistle;
+}
+.main-form button{
+    padding:5px;
+    background-color: tomato;
+    font-weight: bold;
+    color:white;
+
+}
+button{
+    background-color: tomato;
+    font-weight: bold;
+    color:white;
+
+}
+input{
+    padding:10px;
+    margin:10px;
+}
+
+a{
+    position: fixed;
+    top:10;
+    right:20;
+    padding:15px;
+    background-color: darkblue;
+    color:floralwhite;
+    font-weight:bold;
+    text-decoration: none;
+    font-size: 25px;
+
+}
+.ispromotedTrue{
+    color:green;
+    font-weight: bold;
+}
+.ispromotedFalse{
+    color:red;
+    font-weight: bold;
+}
+.ispromotednull{
+    color:yellow;
+    font-weight: bold;
+}
