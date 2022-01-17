@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>TODO APP</title>
+        <link rel='stylesheet' href='/style.css'/>
+    </head>
+    <body>
+        
+        <div class="main">
+            <% data.forEach(user=>{%>
+                <div>
+                    <% if(user.isPromoted===null){%> 
+                        <div class="ispromotednull">
+                            <p >Name: <%=user.name %> </p>
+                            <p >Email: <%=user.email %> </p>
+                        </div>
+                        
+                        <%}
+                        else if(user.isPromoted===false){%>
+                            <div class="ispromotedFalse">
+                                <p>Name: <%=user.name %> </p>
+                                <p>Email: <%=user.email %> </p>
+                                
+                            </div>
+                            
+                            
+                        <%}
+                        else if (user.isPromoted===true){%>
+                            <div class="ispromotedTrue">
+                                <p>Name: <%=user.name %> </p>
+                                <p>Email: <%=user.email %> </p>
+                                
+                            </div>
+                            
+                            
+                        <%}
+                        %>
+
+                        <form method="POST" action="/users/<%=user._id%>?_method=PUT">
+                            <button id="edit-<%= user.name %>" type="submit">
+                                <% 
+                                    if(user.isPromoted===true){%> <%= 'Demote' %><%}
+                                    else{%> <%= 'Promote' %><%}
+                                 
+                                %></button>
+                        </form>
+                    
+                   
+                        <form method="POST" action="/users/<%=user._id%>?_method=DELETE">
+                            <button id="delete-<%= user.name %>" type="submit">Delete</button>
+                        </form>
+                </div>
+            <%})%>
+        </div>
+        <a href='/form'>add user</a>
+       
+        
+    </body>
+</html>
